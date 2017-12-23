@@ -2,7 +2,7 @@ PGPoolJUI is a simple web ui for [PGPool](https://github.com/sLoPPydrive/PGPool/
 made with [Vaadin](https://vaadin.com/) and [Groovy](http://groovy-lang.org/).
 No database changes required, working with already existing PGPool database.
 
-##Account Summary
+## Account Summary
 ![image](https://user-images.githubusercontent.com/19952171/34322771-b4115662-e841-11e7-9865-d6acc682a7e7.png)
 
 ## Instance Summary
