@@ -3,3 +3,5 @@ spring.datasource.driver-class-name=com.mysql.jdbc.Driver
 spring.datasource.url=jdbc:mysql://192.168.1.202/pgpool
 spring.datasource.username=pgo
 spring.datasource.password=PGoPassword
+#server.contextPath=/poolui
+#server.address=127.0.0.1

@@ -16,6 +16,7 @@ After this action PGPool may can allocate them for RocketMap, and map shuold per
 ## Usage
 RocketMap database should be created first.
 ### Using prebuilded jar
+Requires JRE 8
 1. Download latest [release](https://github.com/codename-art/pgpooljui/releases).
 2. Create application.properties file with flowing fields:
 ```properties
@@ -31,6 +32,7 @@ java -jar pgpooljui*.jar
 ```
 
 ### Using latest source code
+Requires JDK 8
 1. `git clone`
 2. Create application.properties same as above.
 3. Build jar:
@@ -40,4 +42,23 @@ java -jar pgpooljui*.jar
 4. Start with:
 ```commandline
 java -jar build/libs/pgpooljui*.jar
+```
+
+### Additional Configuration
+#### Running on non-root context with ngnix
+In `application.properties`:
+```properties
+server.contextPath=/poolui
+```
+nginx configuration:
+```
+location /poolmap {
+        proxy_pass http://localhost:8080/poolui;
+        ... other stuff
+```
+
+#### Restrict remote connections
+In `application.properties`:
+```properties
+server.address=127.0.0.1
 ```
